@@ -151,7 +151,7 @@ async def handle_link(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         ydl_opts = {
             'outtmpl': '%(title).50s.%(ext)s',
-            'format': 'bestvideo+bestaudio/best',
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4',
             'merge_output_format': 'mp4',
             'quiet': True,
             'cookiefile': 'instagram_cookies.txt'
